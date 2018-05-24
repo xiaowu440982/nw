@@ -1,0 +1,37 @@
+<view>
+<!-- <view class="my-gift-btn btn" bindtap="showGift">提交</view> -->
+  <image class="bg" src="../../assets/bg1.png"></image>
+  <view class="box-border upload-border">
+    <view class="box-container">
+      <view class="box-name">{{type_name}}</view>
+        <view class="info-container">
+          <text class="attr">请选择题目类型</text>
+          <image class="i-right" src="../../assets/i-left.png"  />          
+          <picker class="select-district" bindchange="typeChange" value="{{typeIndex}}" range="{{initData.type}}">
+            <view class="department-picker">
+              {{style}}
+            </view>
+          </picker>
+          <text class="attr">题目内容</text>
+          <textarea class="textarea-box" bindinput="getInputVal" data-type="content">{{inputContent}}</textarea>
+          <text class="textarea-tip" wx:if="{{!inputContent.length > 0}}">题目输入格式参考：\n题目（例：WPS是哪家公司开发的软件？）\n+选项（例：微软，苹果，金山）\n+答案（例：金山）</text>
+          <view class="upload-btn btn" bindtap="sendInfo">返回</view>
+        </view>
+    </view>
+  </view>
+
+  <!-- 提交成功弹窗 -->
+  <view class="popup" wx:if="{{isShowPopup}}">
+    <view class="box-border none-gift-border">
+      <view class="box-bg none-gift-bg">
+        <view class="box-name">提交成功</view>
+        <view class="info-container">
+          <image class="i-none-gift" src="../../assets/i-upload.png"></image>
+          <text class="none-gift-tip">您的题目已提交成功，\n将在24小时内审核，请留意！</text>
+          <view class="none-gift-btn btn" bindtap="closePopup">确定</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

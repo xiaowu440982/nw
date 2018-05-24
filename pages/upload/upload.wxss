@@ -1,0 +1,37 @@
+.top-bar {
+	background-color: #3f8cf4;
+	width: 100%;
+	height: 50rpx;
+	position: absolute;
+	z-index: -1;
+}
+.container {
+	padding: 0rpx 49rpx;
+}
+.banner-title {
+	width: 652rpx;
+	height: 301rpx;
+	z-index: 99;
+	display: block;
+}
+.banner-item {
+	width: 652rpx;
+	height: 198rpx;
+	margin-top: 20rpx;
+	position: relative;
+	display: block;
+}
+.icon-wps {
+	width: 133rpx;
+	height: 49rpx;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.icon-cad {
+	width: 192rpx;
+	height: 49rpx;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

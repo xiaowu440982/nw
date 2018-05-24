@@ -1,0 +1,27 @@
+<!-- 题库主页 -->
+<view class="topic">
+	<view class="top-bar"></view>
+	<image class="bg" src="../../assets/bg0.png"></image>
+	<view class="container">
+		<view class="hd">
+			<image class="banner-title-bg" src="../../assets/topic-title-list.png"></image>
+			<!-- <text class="txt-integral">{{hasIntegral}}</text> -->
+			<view class="banner-title">{{title}}</view>
+			<text class="banner-txt">已获得{{click_num}}个点赞题</text>
+			<image class="shadow" src="../../assets/shadow.png"></image>
+		</view>
+
+		<view class="banner-list">
+			<view class="banner-item"  wx:for="{{initData}}">
+				<view class="content" data-id="{{item.id}}" bindtap="toUploadListPage">
+					<image wx:if="{{status==0}}" src="../../assets/i-review.png" />
+          <image wx:if="{{status==1}}" src="../../assets/i-reviewed.png" />
+          <view class="txt">
+            <view class="title">{{item.content}}</view>
+          </view>
+					<view class="i-like"><image src="../../assets/i-like.png" />{{item.click_num}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

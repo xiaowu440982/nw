@@ -1,0 +1,77 @@
+<!-- 首页 -->
+<view class="home">
+  <image class="bg" src="../../assets/bg0.png"></image>
+  <view class="hd">
+    <image class="hd-bg" src="../../assets/h-top-decoration.png"></image>
+    <image class="hd-title" src="../../assets/h-title.png"></image>
+    <view class="hd-box">
+      <image class="hd-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <image class="hd-logo" src="../../assets/h-logo.png"></image>
+      <view class="hd-info">
+        <view class="name">{{userInfo.nickName}}</view>
+        <view class="integral"><image src="../../assets/i-integral.png"></image>{{sore}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="signin">
+    <view class="title">{{title2}}</view>
+    <view class="sub-title">{{title3}}</view>
+    <view class="{{islike ? 'yqd' : 'tip'}}" bindtap="likeFun">{{title1}}</view>
+    <view class="lists">
+
+      <view class="item">
+        <text class="date-signin">第一天</text>
+        <image class="img" wx:if="{{ischeck>=1}}" src="../../assets/i-signin-success.png"  />
+        <image class="img" wx:else src="../../assets/i-sign-never.png"  />
+      </view>
+      
+      <view class="item">
+        <text class="date-signin">第二天</text>
+        <image class="img" wx:if="{{ischeck>=2}}" src="../../assets/i-signin-success.png"  />
+        <image class="img" wx:else src="../../assets/i-sign-never.png"  />
+      </view>
+      <view class="item">
+        <text class="date-signin">第三天</text>
+        <image class="img" wx:if="{{ischeck>=3}}" src="../../assets/i-signin-success.png"  />
+        <image class="img" wx:else src="../../assets/i-sign-never.png"  />
+      </view>
+      <view class="item">
+        <text class="date-signin">第四天</text>
+        <image class="img" wx:if="{{ischeck>=4}}" src="../../assets/i-signin-success.png"  />
+        <image class="img" wx:else src="../../assets/i-sign-never.png"  />
+      </view>
+      <view class="item">
+        <text class="date-signin">第五天</text>
+        <image class="img" wx:if="{{ischeck>=5}}" src="../../assets/i-signin-success.png"  />
+        <image class="img" wx:else src="../../assets/i-sign-never.png"  />
+      </view>
+      <view class="item">
+        <text class="date-signin">第六天</text>
+        <image class="img" wx:if="{{ischeck>=6}}" src="../../assets/i-signin-success.png"  />
+        <image class="img" wx:else src="../../assets/i-sign-never.png"  />
+      </view>
+      <view class="item">
+        <text class="date-signin">第七天</text>
+        <image class="img" wx:if="{{ischeck>=7}}" src="../../assets/i-signin-success.png"  />
+        <image class="img" wx:else src="../../assets/i-sign-never.png"  />
+      </view>
+    </view>
+  </view>
+  <view class="bd">
+    <form report-submit bindsubmit='orderSign'>
+      <view class="item_top">
+        <image class="banner-ex" src="../../assets/b-exercise.png"></image>
+         <button class="report" form-type="submit">submit</button> 
+      </view>
+    </form>
+    <image class="banner-party" src="../../assets/b-party.png" bindtap="toPartyPage"></image>
+
+    <image class="banner-desc" src="../../assets/b-des.png" bindtap="toDescPage"></image>
+    <image class="banner-gift" src="../../assets/b-gift.png" bindtap="toGiftPage"></image>
+    <image class="banner-review" src="../../assets/b-review.png" bindtap="toReviewPage"></image>
+    <image class="banner-upload" src="../../assets/b-upload.png" bindtap="toUploadPage"></image>
+    <image class="banner-wrong" src="../../assets/b-wrong.png" bindtap="toWrongPage"></image>
+    <image class="banner-rank" src="../../assets/b-rank.png" bindtap="toRankPage"></image>      
+  </view>
+</view>

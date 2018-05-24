@@ -1,0 +1,35 @@
+<!-- 题库主页 -->
+<view class="topic">
+	<view class="top-bar"></view>
+	<image class="bg" src="../../assets/bg0.png"></image>
+	<view class="container">
+		<view class="hd">
+			<image class="banner-title-bg" src="../../assets/topic-title-list.png"></image>
+			<!-- <text class="txt-integral">{{hasIntegral}}</text> -->
+			<view class="banner-title">审核题目状态</view>
+			<text class="banner-txt">每个题库包含单选题，多选题，判断题</text>
+			<image class="shadow" src="../../assets/shadow.png"></image>
+		</view>
+
+		<view class="banner-list">
+			<view class="banner-item" data-status="1" bindtap="toReviewListPage">
+				<view class="content">
+					<image src="../../assets/i-reviewed.png" />
+          <view class="txt">
+            <view class="title">审核通过题目</view>
+            <view class="tip">已获得{{test_score}}积分</view>
+          </view>
+				</view>
+			</view>
+      <view class="banner-item" data-status="0" bindtap="toReviewListPage">
+				<view class="content">
+					<image src="../../assets/i-review.png" />
+          <view class="txt">
+            <view class="title">审核中的题目</view>
+            <view class="tip">题目已提交请耐心等待</view>
+          </view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

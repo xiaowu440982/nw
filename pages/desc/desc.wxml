@@ -1,0 +1,4 @@
+<view>
+	<image class="bg" src="../../assets/bg1.png"></image>
+	<image class="desc" src="{{explain}}"></image>
+</view>

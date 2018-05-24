@@ -1,0 +1,146 @@
+<view>
+  <image class="bg" src="../../assets/bg1.png"></image>
+  <image class="gift-title" src="../../assets/gift-title.png" />
+  <view class="integral-item my-integral">您的积分：<image class="i-integral" src="../../assets/i-integral.png"></image><text>{{hasIntegral}}</text></view>
+  <view class="gift-info-lists">
+
+    <view class="gift-info-item" wx:for="{{prizeArray}}">
+      <view class="box-border gift-border">
+        <view class="box-container gift-container" wx:if="{{item.exchange == 0}}">
+          <!-- 礼物图片大小280*335 -->
+          <image class="gift-pic" src="{{item.imgUrl}}"></image>
+        </view>
+
+        <view class="box-container gift-container" wx:else>
+          <!-- 礼物图片大小280*335 -->
+          <image class="gift-img" src="{{item.imgUrl}}"></image>
+          <view class= "gift-info">
+            <text class="gift-name" >{{item.name}}</text>
+
+            <view class="integral-item" wx:if="{{item.needIntegral != 0}}">需要积分：<image class="i-integral" src="../../assets/i-integral.png"></image><text>{{item.needIntegral}}</text></view>
+
+            <!-- <view class="{{hasIntegral >= item.needIntegral ? 'btn' : 'ban-btn'}} exchange-btn" bindtap="showPopup" data-need="{{item.needIntegral}}" data-id="{{item.id}}">兑换</view> -->
+
+            <view wx:if="{{item.needIntegral > 0}}" class="{{hasIntegral >= item.needIntegral ? 'btn' : 'ban-btn'}} exchange-btn" bindtap="showPopup" data-need="{{item.needIntegral}}" data-id="{{item.id}}">点击登记</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="my-gift-btn btn" bindtap="showGift">我的登记</view>
+  </view>
+
+ 
+  
+
+  <!-- 填写兑换奖品--> 
+  <view class="popup" wx:if="{{isShowPopup}}">
+  <!-- <view class="popup"> -->
+  
+    <view class="box-border info-border">
+      <view class="box-bg info-bg">
+        <view class="box-name">兑奖信息登记</view>
+        <view class="info-container">
+          <view class="rule">
+            <view><view class="rule-point"></view><text class="rule-txt">本小程序兑奖活动仅限韶关供电局职工参加</text></view>
+            <view><view class="rule-point"></view><text class="rule-txt">本小程序礼品兑换仅限韶关供电局职工参加</text></view>
+            <view><view class="rule-point"></view><text class="rule-txt">请职工按身份证填写姓名，及本人有效联系的手机号码、所属供电局、地址；</text></view>
+            <view><view class="rule-point"></view><text class="rule-txt">礼品将按以上信息兑换发放，如登记信息有误，将有可能无法兑奖</text></view>
+            
+          </view>
+          <view class="info-item">
+            <text class="attr">姓名：</text>
+            <input class="input-box" placeholder="请输入真实姓名" placeholder-class="input-text" bindinput="getInputVal" data-type="name"></input>
+          </view>
+
+          <view class="info-item">
+            <text class="attr">手机：</text>
+            <input class="input-box" placeholder="请输入联系手机号码" placeholder-class="input-text" bindinput="getInputVal" data-type="phone"></input>
+          </view>
+
+          <view class="info-item">
+            <text class="attr">供电局：</text>
+            <picker class="select-district" bindchange="departmentChange" value="{{departmentIndex}}" range="{{initData.departmentArray}}">
+              <image class="i-left" src="../../assets/i-left.png"></image>
+              <view class="department-picker">
+                {{departmentIndex ? '' : '请选择'}}{{initData.departmentArray[departmentIndex]}}
+              </view>
+            </picker>
+          </view>
+
+          <view class="info-item">
+            <text class="attr">地区：</text>
+            <view class="select-district" bindtap="selectDistrict" style="color: {{areaInfoColor}};">{{areaName}}<image class="i-left" src="../../assets/i-left.png"></image></view>
+          </view>
+
+          <view class="info-item">
+            <text class="attr">详细地址：</text>
+            <textarea class="textarea-box" placeholder="请输入具体的街道地址" placeholder-class="input-text" bindinput="getInputVal" data-type="address"></textarea>
+          </view>
+         
+          <view class="ok-btn btn" bindtap="sendInfo">确定</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 你还没有兑换的奖品 -->
+  <view class="popup" wx:if="{{isShowNoneGiftPopup}}">
+    <view class="box-border none-gift-border">
+      <view class="box-bg none-gift-bg">
+        <view class="box-name">我的奖品</view>
+        <view class="info-container">
+          <image class="i-none-gift" src="../../assets/i-none-gift.png"></image>
+          <view class="none-gift-tip">你还没有兑换的奖品</view>
+          <view class="none-gift-btn btn" bindtap="closePopup">确定</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 我的奖品 -->
+  <view class="popup" wx:if="{{isShowGiftPopup}}">
+    <view class="box-border gift-border">
+      <view class="box-bg gift-bg">
+        <view class="box-name">我的奖品</view>
+        <scroll-view class="gift-lists" scroll-y="true">
+          <view class="gift-item" wx:for="{{initData.myGift}}" wx:key="{{item.name}}">
+            <image src="{{item.imgUrl}}" class="item-img"></image>
+            <view class="item-txt">
+              <view class="txt-name">{{item.name}}</view>
+              <view class="txt-tip">兑换积分：{{item.needIntegral}}</view>
+            </view>
+          </view>
+        </scroll-view>
+        <view class="gift-btn btn" bindtap="closePopup">确定</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<!--城市三级联动-->
+<!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+<!-- <view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}"> -->
+  <!-- <view class="picker-view" animation="{{animationAddressMenu}}" style="display:{{addressMenuIsShow ? 'block':'none'}}"> -->
+  <view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;margin-top:10rpx"> 
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 90%;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="{{item.name}}" class="picker-item">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

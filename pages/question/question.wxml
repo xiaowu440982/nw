@@ -1,0 +1,48 @@
+<!-- 题库主页 -->
+<view>
+	<image class="bg" src="../../assets/bg1.png"></image>
+	<view class="hd">
+		<text class="label">{{showData.label}}</text>
+		<view class="time {{isLessTime ? 'time-danger' : ''}}">{{time}}<text class="time-small">s</text></view>
+		<!-- @likeFun: 是否点赞函数 -->
+		<view class="like" bindtap="likeFun">
+			<!-- @islike: 是否点赞的参数 -->
+			<image src="../../assets/i-{{showData.islike ? 'liked' : 'like'}}.png" />
+			<text class="{{showData.islike ? 'txt-liked' : ''}}">{{showData.click_num}}</text>
+			<view>喜欢题目请点赞</view>
+		</view>
+		<view class="title">{{showData.title}}</view>
+	</view>
+	<view class="question-list">
+		<view class="item {{showData.option[0].itemClass}}" wx:if="{{showData.option.length > 0}}"><view  data-option="0" data-tid="{{showData.id}}" bindtap="selectAnswer">{{showData.option[0].text}}</view></view>
+
+		<view class="item {{showData.option[1].itemClass}}" wx:if="{{showData.option.length > 1}}"><view data-option="1" data-tid="{{showData.id}}" bindtap="selectAnswer">{{showData.option[1].text}}</view></view>
+
+		<view class="item {{showData.option[2].itemClass}}" wx:if="{{showData.option.length > 2}}"><view data-option="2" data-tid="{{showData.id}}" bindtap="selectAnswer">{{showData.option[2].text}}</view></view>
+
+		<view class="item {{showData.option[3].itemClass}}" wx:if="{{showData.option.length > 3}}"><view data-option="3" data-tid="{{showData.id}}" bindtap="selectAnswer">{{showData.option[3].text}}</view></view>
+
+		<view class="btn ok-btn" wx:if="{{showData.type === 1}}" data-tid="{{showData.id}}" bindtap="selectMul">确定</view>
+	</view>
+
+	<view class="popup" wx:if="{{isShowPopup}}">
+    <view class="box-border info-border">
+      <view class="box-bg">
+        <view class="box-name">答题结束</view>
+        <view class="info-container">
+        	<image class="i-gold" src="../../assets/i-gold.png"></image>
+          <block view wx:if="{{start == 1}}">
+ 	           <view class="content">恭喜你获得{{sore}}积分</view>
+        	   <view class="tip">积分可兑换奖品</view>
+          </block>
+          <block wx:else>
+             <view class="content">恭喜你答对了{{numbe}}道题</view>
+             <view class="tip">非活动期间，不能获得积分</view>
+          </block>
+
+          <view class="ok-btn btn" bindtap="toIndexPage">确定</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,250 @@
+@import "../../templates/selectarea/selectarea.wxss";
+
+
+.upload-border {
+	background-color: #3483e9;
+	z-index: 1!important;
+	margin-top: 26rpx!important;
+}
+.box-container {
+	width: 602rpx;
+	height: 906rpx;
+	position: relative;
+	top: 18rpx;
+	border-radius: 32rpx;
+	background-color: #fff;
+}
+.gift-img {
+	position: absolute;
+	top: 120rpx;
+	width: 602rpx;
+	height: 509rpx;
+	border-radius: 32rpx;
+}
+.exchange-btn {
+	position: absolute;
+	top: 900rpx;
+	left: 118rpx;
+	z-index: 2;
+}
+.my-gift-btn {
+	position: absolute;
+	top: 900rpx;
+	right: 118rpx;
+	z-index: 2;
+}
+.gift-info {
+	/*margin: 626rpx auto 0;*/
+	font-size: 30rpx;
+	line-height: 50rpx;
+	color: #333;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 498rpx;
+}
+.integral-item {
+	position: relative;
+}
+.integral-item text {
+	margin-left: 50rpx;
+}
+.i-integral {
+	width: 44rpx;
+	height: 44rpx;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.box-border {
+	background-color: rgba(63, 140, 244, 0.3);
+}
+.info-border {
+	height: 1072rpx!important;
+	margin: 46rpx auto 0!important;
+}
+.info-bg {
+	height: 1040rpx!important;
+}
+.input-box {
+	width: 544rpx;
+	height: 76rpx;
+	line-height: 76rpx;
+	border-radius: 10rpx;
+	background-color: #3f8cf4;
+	color: #fff;
+	font-size: 26rpx;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+}
+.textarea-tip {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 350rpx;
+  left: 50rpx;
+}
+.info-container {
+	width: 100%;
+	padding: 0 29rpx 0;
+	box-sizing: border-box;
+}
+.info-container .attr {
+	margin-left: 20rpx;
+	color: #666;
+	font-size: 26rpx;
+	line-height: 48rpx;
+}
+.select-district {
+	width: 544rpx;
+	height: 76rpx;
+	line-height: 76rpx;
+	border-radius: 10rpx;
+	background-color: #3f8cf4;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 26rpx;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+  position: relative;
+}
+.department-picker {
+	height: 76rpx;
+	line-height: 76rpx;
+	font-size: 26rpx;
+	color: rgba(255, 255, 255, 0.5);
+}
+.i-left {
+  width: 14rpx;
+  height: 24rpx;
+  float: right;
+  margin: 26rpx 0; 
+}
+.textarea-box {
+  width: 544rpx;
+  height: 546rpx;
+  padding: 28rpx 20rpx;
+  box-sizing: border-box;
+  line-height: 36rpx;
+  border-radius: 10rpx;
+  background-color: #3f8cf4;
+  color: #fff;
+  font-size: 26rpx;
+  margin-top: 18rpx;
+} 
+.tip {
+  font-size: 22rpx;
+  color: #666;
+  display: block;
+}
+.upload-btn {
+  margin: 100rpx auto 0;
+}
+
+
+
+.picker-view {
+  width: 100%;
+  display: flex;
+  z-index:99;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  height: 40vh;
+}
+
+.picker-item {
+  line-height: 70rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  text-align: center;
+}
+.red{
+  color: red;
+  display: initial;
+  
+}
+.left{
+  display: block;
+  text-align: right;
+  width: 150rpx
+}
+.myprompt{
+  font-size: 8pt
+}
+.none-gift-border {
+	height: 791rpx!important;
+}
+.none-gift-bg {
+	height: 751rpx!important;
+}
+.i-none-gift {
+	width: 246rpx;
+	height: 291rpx;
+	display: block;
+	margin: 38rpx auto 0;
+}
+.none-gift-tip {
+  width: 100%;
+	color: #999;
+	font-size: 30rpx;
+	text-align: center;
+  margin-top: 40rpx;
+  display: block;
+}
+.none-gift-btn {
+	margin: 40rpx auto 0;
+
+}
+.gift-lists {
+	width: 100%;
+	height: 680rpx;
+	padding: 42rpx 29rpx 0;
+	box-sizing: border-box;
+}
+.gift-item {
+	width: 545rpx;
+  	height: 175rpx;
+  	border-radius: 10rpx;
+	color: #fff;
+	margin: 0 auto 24rpx;
+	padding: 18rpx;
+	background-color: #3f8cf4;
+	box-sizing: border-box;
+}
+.gift-item .item-img {
+	width: 202rpx;
+	height: 137rpx;
+	background-color: #fff;
+	float: left;
+  	border-radius: 10rpx;
+  	margin-right: 22rpx;
+}
+.gift-item .item-txt {
+	float: left;
+	margin-top: 30rpx;
+}
+.txt-name {
+	font-size: 32rpx;
+	line-height: 44rpx;
+}
+.txt-tip {
+	font-size: 26rpx;
+	line-height: 38rpx;
+}
+.gift-btn {
+	margin: 40rpx auto 0;
+}
+.i-right {
+  width: 14rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 197rpx;
+  left: 538rpx;
+  z-index: 1;
+}

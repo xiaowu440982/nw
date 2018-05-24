@@ -1,0 +1,228 @@
+/**index.wxss**/
+.home {
+	width: 100%;
+  height: 100%;
+}
+.hd {
+	height: 474rpx;
+	width: 100%;
+	background-color: #3f8cf4;
+	padding: 21rpx 0 40rpx;
+	position: relative;
+	box-sizing: border-box;
+}
+.hd-bg {
+	position: absolute;
+	top: -122rpx;
+}
+.hd-tip {
+	color: #fff;
+	font-size: 24rpx;
+	text-align: center;
+}
+.hd-title {
+	width: 579rpx;
+	height: 238rpx;
+	display: block;
+	margin: -20rpx auto 0;
+}
+.hd-box {
+	background-color: #405cc6;
+	width: 680rpx;
+	height: 205rpx;
+	transform: translate(-50%, 51rpx);
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	border-radius: 8rpx;
+	padding-right: 37rpx;
+	box-sizing: border-box;
+}
+.hd-logo {
+	width: 235rpx;
+	height: 67rpx;
+	position: absolute;
+	right: 38rpx;
+	bottom: 26rpx;
+}
+.hd-avatar {
+	width: 120rpx;
+	height: 120rpx;
+	border: 9rpx #fff solid;
+	border-radius: 50%;
+	margin: 34rpx 0 0 34rpx;
+	float: left;
+}
+.hd-info {
+	width: 65%;
+	float: left;
+	color: #fff;
+	font-size: 32rpx;
+	margin: 56rpx 0 0 30rpx;
+}
+.hd-info > .name {
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
+.hd-info > .integral {
+	line-height: 64rpx;
+}
+.hd-info > .integral image {
+	margin: 10rpx 6rpx 0 0;
+	width: 44rpx;
+	height: 44rpx;
+	float: left;
+	display: block;
+}
+.bd {
+	margin-top: 70rpx;
+	position: relative;
+	height: 829rpx;
+}
+.banner-ex {
+	position: absolute;
+	top: 176rpx;
+	left: 35rpx;
+	width: 330rpx;
+	height: 310rpx;
+}
+.banner-party {
+	position: absolute;
+	top: 14rpx;
+	left: 35rpx;
+	width: 680rpx;
+	height: 148rpx;
+	z-index: 1;
+}
+.banner-desc {
+	position: absolute;
+	top: 777rpx;
+	right: 35rpx;
+	width: 330rpx;
+	height: 187rpx;
+	margin-bottom: 20rpx;
+}
+.banner-gift {
+	position: absolute;
+	top: 718rpx;
+	left: 35rpx;
+	width: 330rpx;
+	height: 246rpx;
+	margin-bottom: 20rpx;
+}
+.banner-wrong {
+	position: absolute;
+	top: 576rpx;
+	right: 35rpx;
+	width: 330rpx;
+	height: 186rpx;
+}
+.banner-review {
+  position: absolute;
+	top: 376rpx;
+	right: 35rpx;
+	width: 330rpx;
+	height: 186rpx;
+}
+.banner-upload {
+  position: absolute;
+	top: 176rpx;
+	right: 35rpx;
+	width: 330rpx;
+	height: 187rpx;
+}
+.banner-rank {
+  position: absolute;
+	top: 497rpx;
+	left: 35rpx;
+	width: 330rpx;
+	height: 216rpx;
+}
+.item_top{
+  position: relative;
+}
+.report{
+	position:absolute;
+	width:44%;
+	height:310rpx;
+	z-index:99;
+	top:178rpx;
+	left:35rpx;
+	opacity:0;
+
+}
+.signin {
+  width: 680rpx;
+  height: 220rpx;
+  border-radius: 8rpx;
+  position: relative;
+  top: 64rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4762ce;
+  color: #fff;
+  padding: 21rpx 35rpx 0 35rpx;
+  box-sizing: border-box;
+}
+.signin > .title {
+  font-size: 26rpx;
+}
+.signin > .sub-title {
+  font-size: 20rpx;
+  color: rgba(225, 225, 225, 0.5);
+}
+.signin > .tip {
+  width: 158rpx;
+  height: 48rpx;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  border-radius: 24rpx;
+  background-color: #ff4c33;
+  position: absolute;
+  top: 21rpx;
+  right: 26rpx;
+  text-align: center;
+}
+.signin > .lists {
+  width: 100%;
+  font-size: 20rpx;
+  text-align: center;
+  margin-top: 15rpx;
+}
+.signin .item {
+  width: 14.28%;
+  float: left;
+}
+.signin .item > image {
+  width: 63rpx;
+  height: 60rpx;
+  display: block;
+  margin: 13rpx auto 0;
+}
+.signin .item > .date-signin {
+  color: #fff100;
+}
+.yqd{
+  width: 158rpx;
+  height: 48rpx;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  border-radius: 24rpx;
+  background-color: #C7D9F0;
+  position: absolute;
+  top: 21rpx;
+  right: 26rpx;
+  text-align: center;
+}
+.hd-box::after{
+  position: absolute;
+  bottom: 110%;
+  color: white;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  content: "本小程序仅供韶关供电局职工参与"
+}

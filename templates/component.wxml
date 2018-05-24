@@ -1,0 +1,30 @@
+<template name="headData">
+  <view class="headData-container">
+    <image class="headData-img bgAttr" src="{{avatarUrl}}"></image>
+    <view class="headData-name">{{nickName}}</view>
+    <view class="headData-data-box">
+      <view class="headData-data">{{myRink}}</view>
+      <view class="headData-data-name">排行</view>
+    </view>
+    <view class="headData-data-box">
+      <view class="headData-data">{{todayRun}}</view>
+      <view class="headData-data-name">今日步数</view>
+    </view>
+    <view class="headData-data-box">
+      <view class="headData-data">{{myPoint}}</view>
+      <view class="headData-data-name">积分</view>
+    </view>
+  </view>
+</template>
+
+<template name="explain">
+  <view class="icon-explain bgAttr" bindtap="explainTipToggle"></view>
+  <view class="explain-mask" wx:if="{{isExplain}}">
+    <view class="explain-img bgAttr"></view>
+    <view class="explain-close bgAttr" bindtap="explainTipToggle"></view>
+  </view>
+</template>
+
+<template name="banner">
+  <view class="banner"></view>
+</template>

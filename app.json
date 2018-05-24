@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/party/party",
+    "pages/rank/rank",
+    "pages/get-like/get-like",
+    "pages/upload-dec/upload-dec",
+    "pages/upload-list/upload-list",
+    "pages/upload/upload",
+    "pages/review-list/review-list",
+    "pages/review/review",
+    "pages/topic-list/topic-list",
+    "pages/gift/gift",
+    "pages/topic/topic",
+    "pages/question/question",
+    "pages/wrong/wrong",
+    "pages/desc/desc",
+    "pages/wrong-list/wrong-list",
+    "pages/wrong-question/wrong-question"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3f8cf4",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "灯火学堂"
+  }
+}

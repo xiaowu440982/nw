@@ -1,0 +1,26 @@
+<view class="top-bar"></view>
+<view class="warp">
+	
+	<image class="i-headimg" src="../../assets/i-headimg.png" />
+	<image class="avatar" src="{{myShare.img}}" /> 
+	<view class="nickname">{{myShare.name}}</view>
+	<view class="rank">
+		<image class="i-rank-box" src="../../assets/i-rank-box.png" />
+		<view class="rank-txt">当前排行 第{{myShare.rank}}名</view>
+	</view>
+	<view class="like-txt">
+		<image class="" src="../../assets/i-like.png" />
+		<text wx:if="{{myShare.click<=0}}">被赞0次</text>
+    <text wx:else>被赞{{myShare.click}}次</text>
+	</view>
+	<!-- <view class="integral">
+		<image src="../../assets/i-integral.png" />
+		<text>1427</text>
+	</view> -->
+
+	<view class="integral">
+          	<image src="../../assets/i-integral.png" />
+          	<text>{{myShare.mark}}</text>
+          </view>
+	<image class="btn-like" src="../../assets/btn-like.png" bindtap="click_zan"/>
+</view>

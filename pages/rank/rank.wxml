@@ -1,0 +1,60 @@
+<!-- 题库主页 -->
+<view class="topic">
+	<view class="top-bar">
+		<view class="hd">
+			<view class="title">积分排行榜</view>
+			<image class="shadow" src="../../assets/shadow.png"></image>
+		</view>
+	</view>
+	<view class="bottom-bar">
+		<view class="hd">
+			<image class="shadow" src="../../assets/shadow.png"></image>
+        <button open-type="share" class="btn-shareTip-button"></button>		
+			  <image class="btn-shareTip" src="../../assets/btn-shareTip.png" /> 
+		</view>
+	</view>
+	<image class="bg" src="../../assets/bg0.png"></image>
+	<view class="container">
+		<scroll-view scroll-y class="banner-list">
+      <!-- 我的排行 -->
+      <view class="banner-item">
+				<view class="content" wx:if="{{we}}">
+					<image class="rank-box" src="../../assets/rank-box.png" />
+					<image class="rank-icon" wx:if="{{we.rank <= 3}}" src="../../assets/i-no{{we.rank}}.png" />
+					<text class="rank-txt" wx:if="{{we.rank > 3}}">{{we.rank}}</text>
+					<image class="avatar" src="{{we.open.open_face}}"  />
+					<text class="nike-name">{{we.open.open_name}}</text>
+          <view class="integral">
+          	<image src="../../assets/i-integral.png" />
+          	<text>{{we.user_sum}}</text>
+          </view>
+				</view>
+        <view class="content" wx:else>
+        	<image class="rank-box" src="../../assets/rank-box.png" />
+          <text class="nike-name">您当前暂无排名</text>
+        </view>
+			</view>
+      <!-- 我的排行 -->
+			<!-- 列表开始 -->
+			<view class="banner-item" wx:for="{{initData}}" wx:for-index="index" wx:key="{{item.id}}">
+				<view class="content">
+					<image class="rank-box" src="../../assets/rank-box.png" />
+					<image class="rank-icon" wx:if="{{item.rank <= 3}}" src="../../assets/i-no{{item.rank}}.png" />
+					<text class="rank-txt" wx:if="{{item.rank > 3}}">{{item.rank}}</text>
+					<image class="avatar" src="{{item.open.open_face}}"  />
+					<text class="nike-name">{{item.open.open_name}}</text>
+          <view class="integral">
+          	<image src="../../assets/i-integral.png" />
+          	<text>{{item.user_sum}}</text>
+          </view>
+					<view class="like-warp">
+						<!-- @isLike: 是否点赞 -->
+						<view style="color: {{item.isLike ? '#2e49ab' : '#fff'}}">{{item.click}}</view>
+						<image data-index="{{index}}" data-uid="{{item.open_id}}" bindtap='sort_click_zan' class="i-like" src="../../assets/{{item.isLike ? 'i-like-blue': 'i-like'}}.png" />
+					</view>
+				</view>
+			</view>
+			<!-- 列表结束 -->
+		</scroll-view>
+	</view>
+</view>

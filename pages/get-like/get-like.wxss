@@ -1,0 +1,99 @@
+page {
+  background-color: #ceddf3;
+}
+.top-bar {
+	background-color: #3f8cf4;
+	width: 100%;
+	height: 161rpx;
+  position: fixed;
+  top: 0;
+}
+.warp {
+  width: 700rpx;
+  height: 1171rpx;
+  background-color: #4864cf;
+  border-radius: 20rpx 20rpx 0 0;
+  position: relative;
+  left: 26rpx;
+}
+.avatar {
+  width: 152rpx;
+  height: 152rpx;
+  border: 12rpx #fff solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 264rpx;
+  top: 225rpx;
+}
+.i-headimg {
+  width: 472rpx;
+  height: 193rpx;
+  position: absolute;
+  top: 213rpx;
+  left: 117rpx;
+}
+.i-rank-box {
+  width: 468rpx;
+  height: 107rpx;
+  position: absolute;
+  left: 116rpx;
+  top: 524rpx;
+}
+.btn-like {
+  width: 292rpx;
+  height: 88rpx;
+  top: 912rpx;
+  left: 205rpx;
+  position: absolute;
+}
+.rank-txt {
+  color: #fff;
+  font-size: 38rpx;
+  line-height: 76rpx;
+  top: 524rpx;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+}
+.nickname {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  position: absolute;
+  top: 435rpx;
+}
+.like-txt {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  position: absolute;
+  top: 642rpx;
+}
+.like-txt > image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: 7rpx;
+  margin-right: 7rpx;
+}
+.integral {
+  width: 170rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  border-radius: 27rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 728rpx;
+  border: 1rpx #fff solid;
+}
+.integral > image {
+	width: 44rpx;
+	height: 44rpx;
+	margin-left: 8rpx;
+	margin-top: 7rpx;
+	margin-right: 13rpx;
+	float: left;
+}

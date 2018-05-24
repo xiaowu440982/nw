@@ -1,0 +1,6 @@
+.desc {
+	width: 641rpx;
+	height: 945rpx;
+	margin: 115rpx auto 0;
+	display: block;
+}

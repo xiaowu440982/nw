@@ -1,0 +1,26 @@
+<!-- 题库主页 -->
+<view class="topic">
+	<view class="top-bar"></view>
+	<image class="bg" src="../../assets/bg0.png"></image>
+	<view class="container">
+		<view class="hd">
+			<image class="banner-title-bg" src="../../assets/topic-title-list.png"></image>
+			<image class="i-integral" src="../../assets/i-integral.png"></image>
+			<text class="txt-integral">{{hasIntegral}}</text>
+			<view class="banner-title"><text>{{title}}</text>党员领导干部应知应会题库</view>
+			<text class="banner-txt">每天只能测试一套试题</text>
+			<image class="shadow" src="../../assets/shadow.png"></image>
+		</view>
+
+		<view class="banner-list">
+			<view class="banner-item" wx:for="{{initData}}" wx:key="{{item.initData}}">
+				<view class="content" bindtap="toQuestionPage" data-type="{{type_id}}" data-number="{{item.id}}">
+					<view class="topic-num">{{item.title}}</view>
+					<view class="topic-desc">{{item.short}} | 难度
+						<image wx:for="{{item.start}}" wx:key="*this" class="i-star" src="../../assets/i-star.png" ></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
