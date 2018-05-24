@@ -83,60 +83,60 @@
 }
 .banner-ex {
 	position: absolute;
-	top: 176rpx;
-	left: 35rpx;
+	top: 14rpx;
+	right: 35rpx;
 	width: 330rpx;
-	height: 310rpx;
+	height: 216rpx;
 }
 .banner-party {
 	position: absolute;
 	top: 14rpx;
 	left: 35rpx;
-	width: 680rpx;
-	height: 148rpx;
+	width: 330rpx;
+	height: 216rpx;
 	z-index: 1;
 }
 .banner-desc {
 	position: absolute;
-	top: 777rpx;
+	top: 704rpx;
 	right: 35rpx;
 	width: 330rpx;
-	height: 187rpx;
+	height: 216rpx;
 	margin-bottom: 20rpx;
 }
 .banner-gift {
 	position: absolute;
-	top: 718rpx;
-	left: 35rpx;
+	top: 474rpx;
+	right: 35rpx;
 	width: 330rpx;
-	height: 246rpx;
+	height: 216rpx;
 	margin-bottom: 20rpx;
 }
 .banner-wrong {
 	position: absolute;
-	top: 576rpx;
-	right: 35rpx;
+	top: 244rpx;
+	left: 35rpx;
 	width: 330rpx;
-	height: 186rpx;
+	height: 216rpx;
 }
 .banner-review {
   position: absolute;
-	top: 376rpx;
-	right: 35rpx;
+	top: 704rpx;
+	left: 35rpx;
 	width: 330rpx;
-	height: 186rpx;
+	height: 216rpx;
 }
 .banner-upload {
   position: absolute;
-	top: 176rpx;
-	right: 35rpx;
+	top: 474rpx;
+	left: 35rpx;
 	width: 330rpx;
-	height: 187rpx;
+	height: 216rpx;
 }
 .banner-rank {
   position: absolute;
-	top: 497rpx;
-	left: 35rpx;
+	top: 244rpx;
+	right: 35rpx;
 	width: 330rpx;
 	height: 216rpx;
 }
